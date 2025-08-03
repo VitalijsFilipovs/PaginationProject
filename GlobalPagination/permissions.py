@@ -2,12 +2,13 @@ from rest_framework import permissions
 
 class IsOwnerOrReadOnly(permissions.BasePermission):
     """
-    Только владелец объекта может изменять его. Остальные — только чтение.
+    Разрешение, позволяющее редактировать объект только владельцу.
     """
+
     def has_object_permission(self, request, view, obj):
-        # Разрешить чтение всем
+        # Безопасные методы (GET, HEAD, OPTIONS) разрешены всем авторизованным
         if request.method in permissions.SAFE_METHODS:
             return True
 
-        # Запретить изменение, если не автор
+        # Проверка, является ли пользователь владельцем объекта
         return obj.owner == request.user

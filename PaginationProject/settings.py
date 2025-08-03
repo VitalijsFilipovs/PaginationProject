@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'GlobalPagination',
+    'drf_yasg',
 ]
 
 SECRET_KEY = 'django-insecure-84ksdfg@l1!!y3^&x_v2r0-!q7wcz5s+r#8#v1q4m3'

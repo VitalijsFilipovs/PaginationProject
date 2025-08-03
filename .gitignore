@@ -3,26 +3,45 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 *.log
-*.env
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
 
 # Django
-db.sqlite3
-*.pyc
+*.sqlite3
+media/
+staticfiles/
+.env
+.env.*
 
-# VSCode / PyCharm
+# Venv
+.venv/
+venv/
+
+# VS Code / PyCharm
 .vscode/
 .idea/
 
-# Environments
-.env
-.venv/
-env/
-venv/
+# Migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.pyd
+*/migrations/*.log
 
-# macOS / Windows
-.DS_Store
-Thumbs.db
+# Coverage and test output
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.cache
+junit.xml
 
-# Migrations (если нужно)
-**/migrations/*.pyc
-**/migrations/__pycache__/
+# Swagger schema cache
+*.swagger.json
+*.swagger.yaml
